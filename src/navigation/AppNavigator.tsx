@@ -19,7 +19,14 @@ function AppNavigator() {
           })}
           component={HomeScreen}
         />
-        <Stack.Screen name="Item" component={ItemScreen} />
+        <Stack.Screen
+          name="Item"
+          options={({route}) => ({
+            headerBackTitle: 'Home',
+            headerTitle: route.params ? 'Editar Item' : 'Novo Item',
+          })}
+          component={ItemScreen}
+        />
       </Stack.Navigator>
     </NavigationContainer>
   );
