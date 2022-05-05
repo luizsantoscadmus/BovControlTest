@@ -31,7 +31,7 @@ export default class ChecklistSchema {
     return {
       id: autoIncrement(realmInstance),
       ...data,
-      created_at: moment.utc().format(),
+      created_at: data.created_at || moment.utc().format(),
     };
   }
 
