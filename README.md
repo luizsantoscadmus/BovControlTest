@@ -15,3 +15,8 @@ Executar app no Android
 ```shell
 npx react-native run-android
 ```
+
+Executar servidor `json-server` (API JSON)
+```shell
+npm run serve
+```
